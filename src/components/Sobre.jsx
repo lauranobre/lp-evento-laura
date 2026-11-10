@@ -14,7 +14,8 @@ export default function Sobre() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-2xl mx-auto">
         {destaques.map((item) => (
           <div key={item.rotulo} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <div className="text-3xl font-extrabold text-destaque">{item.quantidade}</div>
+            {/* CORRIGIDO: Trocado text-destaque por text-primaria para passar no teste de contraste */}
+            <div className="text-3xl font-extrabold text-primaria">{item.quantidade}</div>
             <div className="text-sm text-gray-500 font-medium mt-1">{item.rotulo}</div>
           </div>
         ))}
