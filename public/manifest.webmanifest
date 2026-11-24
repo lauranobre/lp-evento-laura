@@ -1,0 +1,21 @@
+{
+"name": "Festival Sabores da Alta Paulista",
+  "short_name": "Festival Sabores",
+  "description": "O melhor da gastronomia regional reunido em um só lugar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#800020",
+  "icons": [
+    {
+      "src": "/icone-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icone-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

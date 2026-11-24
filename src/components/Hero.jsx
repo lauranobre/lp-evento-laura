@@ -1,4 +1,5 @@
 import { evento } from '../data/evento'
+import BotaoLembrete from './BotaoLembrete'
 
 export default function Hero() {
   return (
@@ -8,12 +9,12 @@ export default function Hero() {
         {evento.nome}
       </h1>
       
-      {/* MUDANÇA AQUI: Alterado para text-gray-900 para dar contraste legível no fundo claro */}
+      {/* Alterado para text-gray-900 para dar contraste legível no fundo claro */}
       <p className="text-lg md:text-xl font-medium text-gray-900 max-w-xl mx-auto">
         {evento.slogan}
       </p>
       
-      {/* MUDANÇA AQUI: Ajustado o fundo da badge para preto opaco e o texto bem visível */}
+      {/* Ajustado o fundo da badge para preto opaco e o texto bem visível */}
       <div className="mt-6 font-bold bg-black/40 text-white inline-block px-4 py-2 rounded-full text-sm">
         📅 {evento.data} · 📍 {evento.local}
       </div>
@@ -22,6 +23,8 @@ export default function Hero() {
         <a href="#inscricao" className="bg-gray-900 text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-800 transition-colors inline-block min-h-[44px] border border-transparent">
           Garantir Meu Ingresso
         </a>
+        
+        <BotaoLembrete />
       </div>
     </section>
   )
