@@ -1,9 +1,38 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-primaria: #800020;
-  --color-destaque: #dfb15b;
-  --color-fundo: #f8fafc;
+  --color-primaria: var(--cor-primaria);
+  --color-primaria-hover: var(--cor-primaria-hover);
+  --color-destaque: var(--cor-destaque);
+  --color-fundo: var(--cor-fundo);
+  --color-superficie: var(--cor-superficie);
+  --color-borda: var(--cor-borda);
+  --color-texto: var(--cor-texto);
+  --color-texto-suave: var(--cor-texto-suave);
+}
+
+:root {
+  --cor-primaria: #6E1926;       /* Vinho tinto sofisticado */
+  --cor-primaria-hover: #52111B; /* Vinho mais fechado para hover */
+  --cor-destaque: #C58F36;       /* Dourado âmbar */
+  --cor-fundo: #FAF7F2;          /* Creme aconchegante (papel/linho) */
+  --cor-superficie: #FFFFFF;     /* Branco para cartões */
+  --cor-borda: #E6DFD3;          /* Borda tom areia */
+  --cor-texto: #1F1A17;          /* Preto quente (café) */
+  --cor-texto-suave: #5C534E;    /* Marrom acinzentado legível */
+}
+
+.dark {
+  --cor-primaria: #D96B7B;       /* Vinho rosado claro (alto contraste no escuro) */
+  --cor-primaria-hover: #E88795;
+  --cor-destaque: #E5B55C;       /* Dourado luminoso */
+  --cor-fundo: #14110F;          /* Carvão café profundo */
+  --cor-superficie: #1E1916;     /* Superfície elevada dos cards */
+  --cor-borda: #332B26;          /* Borda sutil escura */
+  --cor-texto: #F5F0EB;          /* Off-white creme para leitura confortável */
+  --cor-texto-suave: #B8ADA5;    /* Cinza quente para subtítulos */
 }
 
 html {

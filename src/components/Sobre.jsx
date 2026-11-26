@@ -6,17 +6,16 @@ export default function Sobre() {
   ]
 
   return (
-    <section id="sobre" className="py-12 border-b border-gray-100">
-      <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">O Evento</h2>
-      <p className="text-gray-600 text-center max-w-2xl mx-auto mb-8">
+    <section id="sobre" className="py-14 border-b border-borda">
+      <h2 className="text-3xl font-bold text-texto mb-4 text-center">O Evento</h2>
+      <p className="text-texto-suave text-center max-w-2xl mx-auto mb-10 leading-relaxed">
         O festival celebra a riqueza culinária da nossa região, unindo pratos típicos, receitas inovadoras e grandes nomes do setor gastronômico para uma experiência inesquecível.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-2xl mx-auto">
         {destaques.map((item) => (
-          <div key={item.rotulo} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            {/* CORRIGIDO: Trocado text-destaque por text-primaria para passar no teste de contraste */}
+          <div key={item.rotulo} className="bg-superficie p-6 rounded-xl shadow-sm border border-borda transition-colors">
             <div className="text-3xl font-extrabold text-primaria">{item.quantidade}</div>
-            <div className="text-sm text-gray-500 font-medium mt-1">{item.rotulo}</div>
+            <div className="text-sm text-texto-suave font-medium mt-1">{item.rotulo}</div>
           </div>
         ))}
       </div>

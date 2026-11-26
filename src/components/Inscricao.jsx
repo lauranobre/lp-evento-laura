@@ -14,8 +14,8 @@ export default function Inscricao() {
 
   if (enviado) {
     return (
-      <section className="py-12 max-w-md mx-auto text-center">
-        <div role="status" className="p-6 bg-green-50 text-green-800 rounded-xl font-medium border border-green-200 shadow-sm">
+      <section className="py-14 max-w-md mx-auto text-center">
+        <div role="status" className="p-6 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 rounded-xl font-medium border border-emerald-200 dark:border-emerald-800 shadow-sm">
           <p className="text-lg font-bold mb-2">🎉 Inscrição confirmada!</p>
           <p>Obrigado, <span className="font-bold">{nome}</span>.</p>
           <p className="text-sm mt-2">Seu voucher para o <span className="font-semibold">{ingresso}</span> foi enviado para {email}.</p>
@@ -25,38 +25,38 @@ export default function Inscricao() {
   }
 
   return (
-    <section id="inscricao" className="py-12 max-w-md mx-auto">
-      <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Garanta sua vaga</h2>
+    <section id="inscricao" className="py-14 max-w-md mx-auto">
+      <div className="bg-superficie p-6 sm:p-8 rounded-2xl border border-borda shadow-sm transition-colors">
+        <h2 className="text-2xl font-bold text-texto mb-6 text-center">Garanta sua vaga</h2>
         <form onSubmit={enviar} className="flex flex-col gap-4">
-          <label className="flex flex-col text-sm font-semibold text-gray-700 gap-1">
+          <label className="flex flex-col text-sm font-semibold text-texto gap-1.5">
             Nome Completo
             <input
               type="text"
               required
               value={nome}
               onChange={(e) => setNome(e.target.value)}
-              className="w-full p-2.5 rounded-lg border border-gray-300 bg-white font-normal focus:outline-primaria"
+              className="w-full p-2.5 rounded-lg border border-borda bg-fundo text-texto font-normal focus:outline-2 focus:outline-primaria"
             />
           </label>
 
-          <label className="flex flex-col text-sm font-semibold text-gray-700 gap-1">
+          <label className="flex flex-col text-sm font-semibold text-texto gap-1.5">
             E-mail
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-2.5 rounded-lg border border-gray-300 bg-white font-normal focus:outline-primaria"
+              className="w-full p-2.5 rounded-lg border border-borda bg-fundo text-texto font-normal focus:outline-2 focus:outline-primaria"
             />
           </label>
 
-          <label className="flex flex-col text-sm font-semibold text-gray-700 gap-1">
+          <label className="flex flex-col text-sm font-semibold text-texto gap-1.5">
             Tipo de Ingresso
             <select
               value={ingresso}
               onChange={(e) => setIngresso(e.target.value)}
-              className="w-full p-2.5 rounded-lg border border-gray-300 bg-white font-normal focus:outline-primaria cursor-pointer"
+              className="w-full p-2.5 rounded-lg border border-borda bg-fundo text-texto font-normal focus:outline-2 focus:outline-primaria cursor-pointer"
             >
               {ingressos.map((ing) => (
                 <option key={ing.id} value={ing.nome}>
@@ -66,7 +66,10 @@ export default function Inscricao() {
             </select>
           </label>
 
-          <button type="submit" className="min-h-[44px] bg-primaria hover:bg-red-700 text-white font-bold py-3 rounded-lg shadow transition-colors cursor-pointer mt-2">
+          <button
+            type="submit"
+            className="min-h-[46px] bg-primaria hover:bg-primaria-hover text-white dark:text-[#14110F] font-bold py-3 rounded-lg shadow transition-colors cursor-pointer mt-2"
+          >
             Confirmar Presença
           </button>
         </form>
